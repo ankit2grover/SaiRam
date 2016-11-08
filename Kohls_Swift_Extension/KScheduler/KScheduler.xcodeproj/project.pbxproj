@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A537CAD21CD88BC00081A73A /* ResourceTableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537CAD11CD88BC00081A73A /* ResourceTableCellTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		A537CB231CD9798D0081A73A /* ChronosFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = A537CB221CD9798D0081A73A /* ChronosFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A537CB2A1CD9798D0081A73A /* ChronosFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A537CB201CD9798D0081A73A /* ChronosFramework.framework */; settings = {ASSET_TAGS = (); }; };
+		A537CB311CD9798D0081A73A /* ChronosFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537CB301CD9798D0081A73A /* ChronosFrameworkTests.swift */; };
+		A537CB351CD9798D0081A73A /* ChronosFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A537CB201CD9798D0081A73A /* ChronosFramework.framework */; };
+		A537CB361CD9798D0081A73A /* ChronosFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A537CB201CD9798D0081A73A /* ChronosFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A537CB3F1CD97FEB0081A73A /* ChronosFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A537CB201CD9798D0081A73A /* ChronosFramework.framework */; };
+		A537CB441CD9C8880081A73A /* ResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A537CACF1CD8845D0081A73A /* ResourceModel.swift */; };
+		A587BF091CE223FC006C755B /* MenuViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587BF081CE223FC006C755B /* MenuViewControllerTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A587BF0C1CE22CF3006C755B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A587BF0B1CE22CF3006C755B /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A5D592401CD2D2B200B974EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D5923F1CD2D2B200B974EE /* AppDelegate.swift */; };
+		A5D592421CD2D2B200B974EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D592411CD2D2B200B974EE /* ViewController.swift */; };
+		A5D592451CD2D2B300B974EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D592431CD2D2B300B974EE /* Main.storyboard */; };
+		A5D592471CD2D2B300B974EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D592461CD2D2B300B974EE /* Assets.xcassets */; };
+		A5D5924A1CD2D2B300B974EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D592481CD2D2B300B974EE /* LaunchScreen.storyboard */; };
+		A5D592581CD2D60A00B974EE /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D592571CD2D60A00B974EE /* ActionViewController.swift */; };
+		A5D5925B1CD2D60A00B974EE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D592591CD2D60A00B974EE /* MainInterface.storyboard */; };
+		A5D5925F1CD2D60A00B974EE /* Tasks.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A5D592551CD2D60A00B974EE /* Tasks.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A537CB2B1CD9798D0081A73A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5D592341CD2D2B200B974EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A537CB1F1CD9798D0081A73A;
+			remoteInfo = ChronosFramework;
+		};
+		A537CB2D1CD9798D0081A73A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5D592341CD2D2B200B974EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5D5923B1CD2D2B200B974EE;
+			remoteInfo = KScheduler;
+		};
+		A537CB331CD9798D0081A73A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5D592341CD2D2B200B974EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A537CB1F1CD9798D0081A73A;
+			remoteInfo = ChronosFramework;
+		};
+		A537CB401CD97FF60081A73A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5D592341CD2D2B200B974EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A537CB1F1CD9798D0081A73A;
+			remoteInfo = ChronosFramework;
+		};
+		A5D5925D1CD2D60A00B974EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5D592341CD2D2B200B974EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5D592541CD2D60A00B974EE;
+			remoteInfo = Tasks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A537CB3A1CD9798D0081A73A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A537CB361CD9798D0081A73A /* ChronosFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D592631CD2D60B00B974EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A5D5925F1CD2D60A00B974EE /* Tasks.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A537CACF1CD8845D0081A73A /* ResourceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourceModel.swift; path = ../KScheduler/ResourceModel.swift; sourceTree = "<group>"; };
+		A537CAD11CD88BC00081A73A /* ResourceTableCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceTableCellTableViewCell.swift; sourceTree = "<group>"; };
+		A537CB201CD9798D0081A73A /* ChronosFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChronosFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A537CB221CD9798D0081A73A /* ChronosFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChronosFramework.h; sourceTree = "<group>"; };
+		A537CB241CD9798D0081A73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A537CB291CD9798D0081A73A /* ChronosFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChronosFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A537CB301CD9798D0081A73A /* ChronosFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChronosFrameworkTests.swift; sourceTree = "<group>"; };
+		A537CB321CD9798D0081A73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A54539651CD432BC00366F18 /* KScheduler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KScheduler.entitlements; sourceTree = "<group>"; };
+		A587BF041CE1BA2D006C755B /* KScheduler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KScheduler-Bridging-Header.h"; sourceTree = "<group>"; };
+		A587BF081CE223FC006C755B /* MenuViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		A587BF0A1CE22CF3006C755B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		A587BF0B1CE22CF3006C755B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		A5C03CF21CD3496C00E206CE /* Tasks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Tasks.entitlements; sourceTree = "<group>"; };
+		A5D5923C1CD2D2B200B974EE /* KScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D5923F1CD2D2B200B974EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5D592411CD2D2B200B974EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5D592441CD2D2B300B974EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5D592461CD2D2B300B974EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5D592491CD2D2B300B974EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5D5924B1CD2D2B300B974EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5D592551CD2D60A00B974EE /* Tasks.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Tasks.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D592571CD2D60A00B974EE /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		A5D5925A1CD2D60A00B974EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A5D5925C1CD2D60A00B974EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A537CB1C1CD9798D0081A73A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A537CB261CD9798D0081A73A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A537CB2A1CD9798D0081A73A /* ChronosFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D592391CD2D2B200B974EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A537CB351CD9798D0081A73A /* ChronosFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D592521CD2D60A00B974EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A537CB3F1CD97FEB0081A73A /* ChronosFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A537CB211CD9798D0081A73A /* ChronosFramework */ = {
+			isa = PBXGroup;
+			children = (
+				A537CACF1CD8845D0081A73A /* ResourceModel.swift */,
+				A537CB221CD9798D0081A73A /* ChronosFramework.h */,
+				A537CB241CD9798D0081A73A /* Info.plist */,
+			);
+			path = ChronosFramework;
+			sourceTree = "<group>";
+		};
+		A537CB2F1CD9798D0081A73A /* ChronosFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				A537CB301CD9798D0081A73A /* ChronosFrameworkTests.swift */,
+				A537CB321CD9798D0081A73A /* Info.plist */,
+			);
+			path = ChronosFrameworkTests;
+			sourceTree = "<group>";
+		};
+		A587BF031CE1B9FF006C755B /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A587BF0A1CE22CF3006C755B /* SWRevealViewController.h */,
+				A587BF0B1CE22CF3006C755B /* SWRevealViewController.m */,
+				A587BF041CE1BA2D006C755B /* KScheduler-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		A5D592331CD2D2B200B974EE = {
+			isa = PBXGroup;
+			children = (
+				A587BF031CE1B9FF006C755B /* SWRevealViewController */,
+				A5D5923E1CD2D2B200B974EE /* KScheduler */,
+				A5D592561CD2D60A00B974EE /* Tasks */,
+				A537CB211CD9798D0081A73A /* ChronosFramework */,
+				A537CB2F1CD9798D0081A73A /* ChronosFrameworkTests */,
+				A5D5923D1CD2D2B200B974EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5D5923D1CD2D2B200B974EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5D5923C1CD2D2B200B974EE /* KScheduler.app */,
+				A5D592551CD2D60A00B974EE /* Tasks.appex */,
+				A537CB201CD9798D0081A73A /* ChronosFramework.framework */,
+				A537CB291CD9798D0081A73A /* ChronosFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5D5923E1CD2D2B200B974EE /* KScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				A54539651CD432BC00366F18 /* KScheduler.entitlements */,
+				A5D5923F1CD2D2B200B974EE /* AppDelegate.swift */,
+				A5D592411CD2D2B200B974EE /* ViewController.swift */,
+				A5D592431CD2D2B300B974EE /* Main.storyboard */,
+				A5D592461CD2D2B300B974EE /* Assets.xcassets */,
+				A5D592481CD2D2B300B974EE /* LaunchScreen.storyboard */,
+				A5D5924B1CD2D2B300B974EE /* Info.plist */,
+				A537CAD11CD88BC00081A73A /* ResourceTableCellTableViewCell.swift */,
+				A587BF081CE223FC006C755B /* MenuViewControllerTableViewController.swift */,
+			);
+			path = KScheduler;
+			sourceTree = "<group>";
+		};
+		A5D592561CD2D60A00B974EE /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				A5C03CF21CD3496C00E206CE /* Tasks.entitlements */,
+				A5D592571CD2D60A00B974EE /* ActionViewController.swift */,
+				A5D592591CD2D60A00B974EE /* MainInterface.storyboard */,
+				A5D5925C1CD2D60A00B974EE /* Info.plist */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A537CB1D1CD9798D0081A73A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A537CB231CD9798D0081A73A /* ChronosFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A537CB1F1CD9798D0081A73A /* ChronosFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A537CB371CD9798D0081A73A /* Build configuration list for PBXNativeTarget "ChronosFramework" */;
+			buildPhases = (
+				A537CB1B1CD9798D0081A73A /* Sources */,
+				A537CB1C1CD9798D0081A73A /* Frameworks */,
+				A537CB1D1CD9798D0081A73A /* Headers */,
+				A537CB1E1CD9798D0081A73A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChronosFramework;
+			productName = ChronosFramework;
+			productReference = A537CB201CD9798D0081A73A /* ChronosFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A537CB281CD9798D0081A73A /* ChronosFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A537CB3B1CD9798D0081A73A /* Build configuration list for PBXNativeTarget "ChronosFrameworkTests" */;
+			buildPhases = (
+				A537CB251CD9798D0081A73A /* Sources */,
+				A537CB261CD9798D0081A73A /* Frameworks */,
+				A537CB271CD9798D0081A73A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A537CB2C1CD9798D0081A73A /* PBXTargetDependency */,
+				A537CB2E1CD9798D0081A73A /* PBXTargetDependency */,
+			);
+			name = ChronosFrameworkTests;
+			productName = ChronosFrameworkTests;
+			productReference = A537CB291CD9798D0081A73A /* ChronosFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5D5923B1CD2D2B200B974EE /* KScheduler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5D5924E1CD2D2B300B974EE /* Build configuration list for PBXNativeTarget "KScheduler" */;
+			buildPhases = (
+				A5D592381CD2D2B200B974EE /* Sources */,
+				A5D592391CD2D2B200B974EE /* Frameworks */,
+				A5D5923A1CD2D2B200B974EE /* Resources */,
+				A5D592631CD2D60B00B974EE /* Embed App Extensions */,
+				A537CB3A1CD9798D0081A73A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5D5925E1CD2D60A00B974EE /* PBXTargetDependency */,
+				A537CB341CD9798D0081A73A /* PBXTargetDependency */,
+			);
+			name = KScheduler;
+			productName = KScheduler;
+			productReference = A5D5923C1CD2D2B200B974EE /* KScheduler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5D592541CD2D60A00B974EE /* Tasks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5D592601CD2D60B00B974EE /* Build configuration list for PBXNativeTarget "Tasks" */;
+			buildPhases = (
+				A5D592511CD2D60A00B974EE /* Sources */,
+				A5D592521CD2D60A00B974EE /* Frameworks */,
+				A5D592531CD2D60A00B974EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A537CB411CD97FF60081A73A /* PBXTargetDependency */,
+			);
+			name = Tasks;
+			productName = Tasks;
+			productReference = A5D592551CD2D60A00B974EE /* Tasks.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5D592341CD2D2B200B974EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Kohls;
+				TargetAttributes = {
+					A537CB1F1CD9798D0081A73A = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Q43KS8XM2A;
+					};
+					A537CB281CD9798D0081A73A = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = A5D5923B1CD2D2B200B974EE;
+					};
+					A5D5923B1CD2D2B200B974EE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Q43KS8XM2A;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					A5D592541CD2D60A00B974EE = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Q43KS8XM2A;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = A5D592371CD2D2B200B974EE /* Build configuration list for PBXProject "KScheduler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5D592331CD2D2B200B974EE;
+			productRefGroup = A5D5923D1CD2D2B200B974EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5D5923B1CD2D2B200B974EE /* KScheduler */,
+				A5D592541CD2D60A00B974EE /* Tasks */,
+				A537CB1F1CD9798D0081A73A /* ChronosFramework */,
+				A537CB281CD9798D0081A73A /* ChronosFrameworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A537CB1E1CD9798D0081A73A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A537CB271CD9798D0081A73A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D5923A1CD2D2B200B974EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5D5924A1CD2D2B300B974EE /* LaunchScreen.storyboard in Resources */,
+				A5D592471CD2D2B300B974EE /* Assets.xcassets in Resources */,
+				A5D592451CD2D2B300B974EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D592531CD2D60A00B974EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5D5925B1CD2D60A00B974EE /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A537CB1B1CD9798D0081A73A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A537CB441CD9C8880081A73A /* ResourceModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A537CB251CD9798D0081A73A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A537CB311CD9798D0081A73A /* ChronosFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D592381CD2D2B200B974EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A587BF091CE223FC006C755B /* MenuViewControllerTableViewController.swift in Sources */,
+				A5D592421CD2D2B200B974EE /* ViewController.swift in Sources */,
+				A587BF0C1CE22CF3006C755B /* SWRevealViewController.m in Sources */,
+				A537CAD21CD88BC00081A73A /* ResourceTableCellTableViewCell.swift in Sources */,
+				A5D592401CD2D2B200B974EE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D592511CD2D60A00B974EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5D592581CD2D60A00B974EE /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A537CB2C1CD9798D0081A73A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A537CB1F1CD9798D0081A73A /* ChronosFramework */;
+			targetProxy = A537CB2B1CD9798D0081A73A /* PBXContainerItemProxy */;
+		};
+		A537CB2E1CD9798D0081A73A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5D5923B1CD2D2B200B974EE /* KScheduler */;
+			targetProxy = A537CB2D1CD9798D0081A73A /* PBXContainerItemProxy */;
+		};
+		A537CB341CD9798D0081A73A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A537CB1F1CD9798D0081A73A /* ChronosFramework */;
+			targetProxy = A537CB331CD9798D0081A73A /* PBXContainerItemProxy */;
+		};
+		A537CB411CD97FF60081A73A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A537CB1F1CD9798D0081A73A /* ChronosFramework */;
+			targetProxy = A537CB401CD97FF60081A73A /* PBXContainerItemProxy */;
+		};
+		A5D5925E1CD2D60A00B974EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5D592541CD2D60A00B974EE /* Tasks */;
+			targetProxy = A5D5925D1CD2D60A00B974EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5D592431CD2D2B300B974EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5D592441CD2D2B300B974EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5D592481CD2D2B300B974EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5D592491CD2D2B300B974EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A5D592591CD2D60A00B974EE /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5D5925A1CD2D60A00B974EE /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A537CB381CD9798D0081A73A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ChronosFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.mcommerce.iphone.ChronosFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A537CB391CD9798D0081A73A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ChronosFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.mcommerce.iphone.ChronosFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A537CB3C1CD9798D0081A73A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChronosFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.mcommerce.iphone.ChronosFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KScheduler.app/KScheduler";
+			};
+			name = Debug;
+		};
+		A537CB3D1CD9798D0081A73A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChronosFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.mcommerce.iphone.ChronosFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KScheduler.app/KScheduler";
+			};
+			name = Release;
+		};
+		A5D5924C1CD2D2B300B974EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5D5924D1CD2D2B300B974EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5D5924F1CD2D2B300B974EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KScheduler/KScheduler.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = KScheduler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.mcommerce.iphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KScheduler-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5D592501CD2D2B300B974EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = KScheduler/KScheduler.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = KScheduler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.mcommerce.iphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KScheduler-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		A5D592611CD2D60B00B974EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Tasks/Tasks.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Tasks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.mcommerce.iphone.tasksextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A5D592621CD2D60B00B974EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Tasks/Tasks.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Tasks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.mcommerce.iphone.tasksextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A537CB371CD9798D0081A73A /* Build configuration list for PBXNativeTarget "ChronosFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A537CB381CD9798D0081A73A /* Debug */,
+				A537CB391CD9798D0081A73A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A537CB3B1CD9798D0081A73A /* Build configuration list for PBXNativeTarget "ChronosFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A537CB3C1CD9798D0081A73A /* Debug */,
+				A537CB3D1CD9798D0081A73A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5D592371CD2D2B200B974EE /* Build configuration list for PBXProject "KScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5D5924C1CD2D2B300B974EE /* Debug */,
+				A5D5924D1CD2D2B300B974EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5D5924E1CD2D2B300B974EE /* Build configuration list for PBXNativeTarget "KScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5D5924F1CD2D2B300B974EE /* Debug */,
+				A5D592501CD2D2B300B974EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5D592601CD2D60B00B974EE /* Build configuration list for PBXNativeTarget "Tasks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5D592611CD2D60B00B974EE /* Debug */,
+				A5D592621CD2D60B00B974EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5D592341CD2D2B200B974EE /* Project object */;
+}

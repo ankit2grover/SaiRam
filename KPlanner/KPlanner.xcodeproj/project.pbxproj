@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7A533461CCA94BB00577064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A533451CCA94BB00577064 /* AppDelegate.swift */; };
+		B7A533481CCA94BB00577064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A533471CCA94BB00577064 /* ViewController.swift */; };
+		B7A5334B1CCA94BB00577064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A533491CCA94BB00577064 /* Main.storyboard */; };
+		B7A5334D1CCA94BB00577064 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A5334C1CCA94BB00577064 /* Images.xcassets */; };
+		B7A533501CCA94BB00577064 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7A5334E1CCA94BB00577064 /* LaunchScreen.xib */; };
+		B7A5335C1CCA94BB00577064 /* KPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5335B1CCA94BB00577064 /* KPlannerTests.swift */; };
+		B7A533661CCDB2AB00577064 /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A533651CCDB2AB00577064 /* TaskData.swift */; };
+		B7A533701CCDCACF00577064 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5336F1CCDCACF00577064 /* ActionViewController.swift */; };
+		B7A533721CCDCACF00577064 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A533711CCDCACF00577064 /* MainInterface.storyboard */; };
+		B7A533751CCDCACF00577064 /* PlannerExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B7A5336B1CCDCACF00577064 /* PlannerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7A5337C1CCDD93E00577064 /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A5337B1CCDD93E00577064 /* TaskData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5D592311CD2C65900B974EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7A533381CCA94BB00577064 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7A5336A1CCDCACF00577064;
+			remoteInfo = PlannerExtension;
+		};
+		B7A533561CCA94BB00577064 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7A533381CCA94BB00577064 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7A5333F1CCA94BB00577064;
+			remoteInfo = KPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7A533791CCDCACF00577064 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B7A533751CCDCACF00577064 /* PlannerExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B7A533401CCA94BB00577064 /* KPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A533441CCA94BB00577064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A533451CCA94BB00577064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7A533471CCA94BB00577064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7A5334A1CCA94BB00577064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7A5334C1CCA94BB00577064 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B7A5334F1CCA94BB00577064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B7A533551CCA94BB00577064 /* KPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A5335A1CCA94BB00577064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A5335B1CCA94BB00577064 /* KPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPlannerTests.swift; sourceTree = "<group>"; };
+		B7A533651CCDB2AB00577064 /* TaskData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
+		B7A5336B1CCDCACF00577064 /* PlannerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PlannerExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A5336E1CCDCACF00577064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A5336F1CCDCACF00577064 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		B7A533711CCDCACF00577064 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		B7A5337B1CCDD93E00577064 /* TaskData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7A5333D1CCA94BB00577064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A533521CCA94BB00577064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A533681CCDCACF00577064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7A533371CCA94BB00577064 = {
+			isa = PBXGroup;
+			children = (
+				B7A533421CCA94BB00577064 /* KPlanner */,
+				B7A533581CCA94BB00577064 /* KPlannerTests */,
+				B7A5336C1CCDCACF00577064 /* PlannerExtension */,
+				B7A533411CCA94BB00577064 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7A533411CCA94BB00577064 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7A533401CCA94BB00577064 /* KPlanner.app */,
+				B7A533551CCA94BB00577064 /* KPlannerTests.xctest */,
+				B7A5336B1CCDCACF00577064 /* PlannerExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7A533421CCA94BB00577064 /* KPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				B7A533451CCA94BB00577064 /* AppDelegate.swift */,
+				B7A533471CCA94BB00577064 /* ViewController.swift */,
+				B7A533491CCA94BB00577064 /* Main.storyboard */,
+				B7A5334C1CCA94BB00577064 /* Images.xcassets */,
+				B7A5334E1CCA94BB00577064 /* LaunchScreen.xib */,
+				B7A533431CCA94BB00577064 /* Supporting Files */,
+				B7A533651CCDB2AB00577064 /* TaskData.swift */,
+			);
+			path = KPlanner;
+			sourceTree = "<group>";
+		};
+		B7A533431CCA94BB00577064 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7A533441CCA94BB00577064 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7A533581CCA94BB00577064 /* KPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5335B1CCA94BB00577064 /* KPlannerTests.swift */,
+				B7A533591CCA94BB00577064 /* Supporting Files */,
+			);
+			path = KPlannerTests;
+			sourceTree = "<group>";
+		};
+		B7A533591CCA94BB00577064 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5335A1CCA94BB00577064 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7A5336C1CCDCACF00577064 /* PlannerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5336F1CCDCACF00577064 /* ActionViewController.swift */,
+				B7A533711CCDCACF00577064 /* MainInterface.storyboard */,
+				B7A5336D1CCDCACF00577064 /* Supporting Files */,
+				B7A5337B1CCDD93E00577064 /* TaskData.swift */,
+			);
+			path = PlannerExtension;
+			sourceTree = "<group>";
+		};
+		B7A5336D1CCDCACF00577064 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5336E1CCDCACF00577064 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7A5333F1CCA94BB00577064 /* KPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A5335F1CCA94BB00577064 /* Build configuration list for PBXNativeTarget "KPlanner" */;
+			buildPhases = (
+				B7A5333C1CCA94BB00577064 /* Sources */,
+				B7A5333D1CCA94BB00577064 /* Frameworks */,
+				B7A5333E1CCA94BB00577064 /* Resources */,
+				B7A533791CCDCACF00577064 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5D592321CD2C65900B974EE /* PBXTargetDependency */,
+			);
+			name = KPlanner;
+			productName = KPlanner;
+			productReference = B7A533401CCA94BB00577064 /* KPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7A533541CCA94BB00577064 /* KPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A533621CCA94BB00577064 /* Build configuration list for PBXNativeTarget "KPlannerTests" */;
+			buildPhases = (
+				B7A533511CCA94BB00577064 /* Sources */,
+				B7A533521CCA94BB00577064 /* Frameworks */,
+				B7A533531CCA94BB00577064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7A533571CCA94BB00577064 /* PBXTargetDependency */,
+			);
+			name = KPlannerTests;
+			productName = KPlannerTests;
+			productReference = B7A533551CCA94BB00577064 /* KPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7A5336A1CCDCACF00577064 /* PlannerExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A533761CCDCACF00577064 /* Build configuration list for PBXNativeTarget "PlannerExtension" */;
+			buildPhases = (
+				B7A533671CCDCACF00577064 /* Sources */,
+				B7A533681CCDCACF00577064 /* Frameworks */,
+				B7A533691CCDCACF00577064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlannerExtension;
+			productName = PlannerExtension;
+			productReference = B7A5336B1CCDCACF00577064 /* PlannerExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7A533381CCA94BB00577064 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Jui Joshi";
+				TargetAttributes = {
+					B7A5333F1CCA94BB00577064 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					B7A533541CCA94BB00577064 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = B7A5333F1CCA94BB00577064;
+					};
+					B7A5336A1CCDCACF00577064 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = B7A5333B1CCA94BB00577064 /* Build configuration list for PBXProject "KPlanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7A533371CCA94BB00577064;
+			productRefGroup = B7A533411CCA94BB00577064 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7A5333F1CCA94BB00577064 /* KPlanner */,
+				B7A533541CCA94BB00577064 /* KPlannerTests */,
+				B7A5336A1CCDCACF00577064 /* PlannerExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7A5333E1CCA94BB00577064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A5334B1CCA94BB00577064 /* Main.storyboard in Resources */,
+				B7A533501CCA94BB00577064 /* LaunchScreen.xib in Resources */,
+				B7A5334D1CCA94BB00577064 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A533531CCA94BB00577064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A533691CCDCACF00577064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A533721CCDCACF00577064 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7A5333C1CCA94BB00577064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A533481CCA94BB00577064 /* ViewController.swift in Sources */,
+				B7A533461CCA94BB00577064 /* AppDelegate.swift in Sources */,
+				B7A533661CCDB2AB00577064 /* TaskData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A533511CCA94BB00577064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A5335C1CCA94BB00577064 /* KPlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7A533671CCDCACF00577064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A5337C1CCDD93E00577064 /* TaskData.swift in Sources */,
+				B7A533701CCDCACF00577064 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5D592321CD2C65900B974EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7A5336A1CCDCACF00577064 /* PlannerExtension */;
+			targetProxy = A5D592311CD2C65900B974EE /* PBXContainerItemProxy */;
+		};
+		B7A533571CCA94BB00577064 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7A5333F1CCA94BB00577064 /* KPlanner */;
+			targetProxy = B7A533561CCA94BB00577064 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7A533491CCA94BB00577064 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7A5334A1CCA94BB00577064 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7A5334E1CCA94BB00577064 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7A5334F1CCA94BB00577064 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7A5335D1CCA94BB00577064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7A5335E1CCA94BB00577064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7A533601CCA94BB00577064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = KPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7A533611CCA94BB00577064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = KPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B7A533631CCA94BB00577064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kohls.tkmagz4.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KPlanner.app/KPlanner";
+			};
+			name = Debug;
+		};
+		B7A533641CCA94BB00577064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kohls.tkmagz4.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KPlanner.app/KPlanner";
+			};
+			name = Release;
+		};
+		B7A533771CCDCACF00577064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PlannerExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7A533781CCDCACF00577064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = PlannerExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kohls.today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7A5333B1CCA94BB00577064 /* Build configuration list for PBXProject "KPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A5335D1CCA94BB00577064 /* Debug */,
+				B7A5335E1CCA94BB00577064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A5335F1CCA94BB00577064 /* Build configuration list for PBXNativeTarget "KPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A533601CCA94BB00577064 /* Debug */,
+				B7A533611CCA94BB00577064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A533621CCA94BB00577064 /* Build configuration list for PBXNativeTarget "KPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A533631CCA94BB00577064 /* Debug */,
+				B7A533641CCA94BB00577064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A533761CCDCACF00577064 /* Build configuration list for PBXNativeTarget "PlannerExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A533771CCDCACF00577064 /* Debug */,
+				B7A533781CCDCACF00577064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7A533381CCA94BB00577064 /* Project object */;
+}
