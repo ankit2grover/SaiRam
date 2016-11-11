@@ -10,6 +10,7 @@ import os
 import numpy as np
 from scipy import ndimage
 from six.moves import cPickle as pickle
+import matplotlib.pyplot as plt
 
 train_file_name = 'notMNIST_large.tar.gz'
 test_file_name = 'notMNIST_small.tar.gz'
@@ -100,10 +101,26 @@ def loadDataFromPickle(data_folders):
         
         return train_dataset,train_labels_dataset,valid_dataset,valid_labels_dataset
      
-train_dataset,train_labels_dataset,valid_dataset,valid_labels_dataset = loadDataFromPickle(data_folders)
+#train_dataset,train_labels_dataset,valid_dataset,valid_labels_dataset = loadDataFromPickle(data_folders)
 
-
+def loadImage():
+    folder = data_folders[0]
+    pickle_file = folder + ".pickle"
+    try:
+        with open(pickle_file, 'rb') as f:
+            letter_images = pickle.load(f)
+            sample_idx = np.random.randint(len(letter_images))
+            letter_img = letter_images[sample_idx,:,:]
+            plt.figure()
+            plt.imshow(letter_img)
         
+    except Exception as e:
+        print('Unable to process data from', pickle_file, ':', e)
+        raise
+        
+loadImage()
+            
+    
         
         
 
