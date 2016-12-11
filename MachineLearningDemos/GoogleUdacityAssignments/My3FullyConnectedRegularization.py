@@ -1,0 +1,230 @@
+# These are all the modules we'll be using later. Make sure you can import them
+# before proceeding further.
+from __future__ import print_function
+import numpy as np
+import tensorflow as tf
+from six.moves import cPickle as pickle
+
+pickle_file = 'notMNIST.pickle'
+
+def loadMNISTData():
+    try:
+        with open(pickle_file, 'rb') as f:
+            save = pickle.load(f)
+            train_dataset = save['train_dataset']
+            train_labels = save['train_labels']
+            valid_dataset = save['valid_dataset']
+            valid_labels = save['valid_labels']
+            test_dataset = save['test_dataset']
+            test_labels = save['test_labels']
+            
+            del save  # hint to help gc free up memory
+            print('Training set', train_dataset.shape, train_labels.shape)
+            print('Validation set', valid_dataset.shape, valid_labels.shape)
+            print('Test set', test_dataset.shape, test_labels.shape)
+            return train_dataset, train_labels, valid_dataset, valid_labels, test_dataset, test_labels
+    except Exception as e:
+        print('Unable to read data from ', pickle_file, ':', e)
+    raise
+    
+    
+train_dataset, train_labels, valid_dataset, valid_labels, test_dataset, test_labels = loadMNISTData()
+
+num_labels = 10
+image_size = 28
+
+def reformat(dataset, labels):
+    dataset = dataset.reshape((-1, image_size * image_size)).astype(np.float32)
+    labels = (np.arange(num_labels) == labels[:, None]).astype(np.float32)
+    return dataset, labels
+
+train_dataset, train_labels = reformat(train_dataset, train_labels)
+valid_dataset, valid_labels = reformat(valid_dataset, valid_labels)
+test_dataset, test_labels = reformat(test_dataset, test_labels)
+
+def accuracy(predictions, labels):
+    return (100 * np.sum((np.argmax(predictions, axis = 1) == np.argmax(labels, axis = 1)))/ predictions.shape[0])
+    
+# With gradient descent training, even this much data is prohibitive.
+# Subset the training data for faster turnaround.
+train_subset = 10000
+
+
+
+graph = tf.Graph()
+with graph.as_default():
+    # Input data.
+    # Load the training, validation and test data into constants that are
+    # attached to the graph.
+    tf_train_dataset = tf.constant(train_dataset[: train_subset, :])
+    tf_train_labels = tf.constant(train_labels[: train_subset])
+    tf_valid_dataset = tf.constant(valid_dataset)
+    tf_valid_labels = tf.constant(valid_labels)
+    tf_test_dataset = tf.constant(test_dataset)
+    
+    # Variables.
+    # These are the parameters that we are going to be training. The weight
+    # matrix will be initialized using random values following a (truncated)
+    # normal distribution. The biases get initialized to zero.
+    weights = tf.Variable(tf.truncated_normal([image_size * image_size, num_labels]))
+    biases = tf.Variable(tf.zeros([num_labels]))
+  
+    # Variables.
+    # These are the parameters that we are going to be training. The weight
+    # matrix will be initialized using random values following a (truncated)
+    # normal distribution. The biases get initialized to zero.
+    logits = tf.matmul(tf_train_dataset, weights) + biases
+    loss = (tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, tf_train_labels)) + 0.01 * tf.nn.l2_loss(weights) + 0.01 * tf.nn.l2_loss(biases))
+    
+    #print (logits)
+    #print (loss)
+    # Optimizer.
+    # We are going to find the minimum of this loss using gradient descent.
+    optimizer = tf.train.GradientDescentOptimizer(0.5).minimize(loss)
+  
+    # Predictions for the training, validation, and test data.
+    # These are not part of training, but merely here so that we can report
+    # accuracy figures as we train.
+    train_prediction = tf.nn.softmax(logits)
+    valid_prediction = tf.nn.softmax(tf.matmul(tf_valid_dataset, weights) + biases)
+    test_prediction = tf.nn.softmax(tf.matmul(tf_test_dataset, weights) + biases)
+    #print (train_prediction)
+    
+
+num_steps = 801
+
+    
+
+
+## Gradient Descent algorithm computation, slow but accurate.
+
+with tf.Session(graph=graph) as session:
+    # This is a one-time operation which ensures the parameters get initialized as
+    # we described in the graph: random weights for the matrix, zeros for the
+    # biases.
+    tf.initialize_all_variables().run()
+    ##tf.global_variables_initializer().run()
+    for step in range(num_steps):
+        # Run the computations. We tell .run() that we want to run the optimizer,
+        # and get the loss value and the training predictions returned as numpy
+        # arrays.
+        op, new_loss, new_train_pred = session.run([optimizer, loss, train_prediction])
+        if ((step % 100) == 0):
+            print ("Loass %.2f at step %d" %(new_loss, step))
+            print("Train accuracy %.2f" %accuracy(new_train_pred, train_labels[:train_subset, :]))
+            print("Validation accuracy %.2f" %accuracy(valid_prediction.eval(), valid_labels))
+    
+    print("Test accuracy %.2f" %accuracy(test_prediction.eval(), test_labels))
+
+    ## Stochastic gradient descent algorithm computation, in which we will consider batches of inputs. It is faster than GD, but not as accurate.
+
+batch_size = 128
+num_neurons = 1024
+
+with graph.as_default():
+    # Input data.
+    # Load the training, validation and test data into constants that are
+    # attached to the graph.
+    tf_train_dataset = tf.placeholder(tf.float32,
+                                    shape=(batch_size, image_size * image_size))
+    tf_train_labels = tf.placeholder(tf.float32,
+                                    shape=(batch_size, num_labels))
+    tf_valid_dataset = tf.constant(valid_dataset)
+    tf_valid_labels = tf.constant(valid_labels)
+    tf_test_dataset = tf.constant(test_dataset)
+
+    # Hidden Layer Variables. Hidden layer is of 1024 neurons.
+    # Hence hidden weights contaiing matrix of 784*1024 and biases of 1024*1
+    # These are the parameters of the hidden layer. The weight
+    # matrix will be initialized using random values following a (truncated)
+    # normal distribution. The biases get initialized to zero.
+    hidden_weights = tf.Variable(tf.truncated_normal([image_size * image_size, num_neurons]))
+    hidden_biases = tf.Variable(tf.zeros([num_neurons]))
+
+    # Hidden layer Relu
+    hidden_layer_relu_inputs = tf.matmul(tf_train_dataset, hidden_weights) + hidden_biases
+    hidden_layer_relu_outputs = tf.nn.relu(hidden_layer_relu_inputs)
+    dropout_prob = tf.placeholder("float")
+    hidd_relu_out = tf.nn.dropout(hidden_layer_relu_outputs, dropout_prob)
+    
+
+    # Output layer
+
+    # Variables.
+    # These are the parameters that we are going to be training. The weight
+    # matrix will be initialized using random values following a (truncated)
+    # normal distribution. The biases get initialized to zero.
+    weights = tf.Variable(tf.truncated_normal([num_neurons, num_labels]))
+    biases = tf.Variable(tf.zeros([num_labels]))
+  
+    # Variables.
+    # These are the parameters that we are going to be training. The weight
+    # matrix will be initialized using random values following a (truncated)
+    # normal distribution. The biases get initialized to zero.
+    logits = tf.matmul(hidd_relu_out, weights) + biases
+    loss = (tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits, tf_train_labels)) + 0.01 * tf.nn.l2_loss(weights) + 0.01 * tf.nn.l2_loss(biases) + 0.01 * tf.nn.l2_loss(hidden_weights) + 0.01 * tf.nn.l2_loss(hidden_biases))
+    
+    #print (logits)
+    #print (loss)
+
+    global_step = tf.Variable(0)  # count the number of steps taken.
+    starter_learning_rate = 0.5
+    learning_rate = tf.train.exponential_decay(starter_learning_rate, global_step, 100, 0.50, staircase=True)
+    # Optimizer.
+    # We are going to find the minimum of this loss using gradient descent.
+    optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss, global_step = global_step)
+  
+    # Predictions for the training, validation, and test data.
+    # These are not part of training, but merely here so that we can report
+    # accuracy figures as we train.
+    train_prediction = tf.nn.softmax(logits)
+
+    # Hidden layer Relu on validation data set and compute validation accuracy
+    hidden_layer_inputs = tf.matmul(tf_valid_dataset, hidden_weights) + hidden_biases
+    hidden_layer_outputs = tf.nn.relu(hidden_layer_inputs)
+    valid_prediction = tf.nn.softmax(tf.matmul(hidden_layer_outputs, weights) + biases)
+    
+    # Hidden layer Relu on test data set and compute test accuracy
+    hidden_layer_inputs = tf.matmul(tf_test_dataset, hidden_weights) + hidden_biases
+    hidden_layer_outputs = tf.nn.relu(hidden_layer_inputs)
+    test_prediction = tf.nn.softmax(tf.matmul(hidden_layer_outputs, weights) + biases)
+    
+
+
+    ## Stochastic gradient descent algorithm computation, steps increased and training data is reduced to batches.
+
+
+num_steps = 1001
+with tf.Session(graph=graph) as session:
+    # This is a one-time operation which ensures the parameters get initialized as
+    # we described in the graph: random weights for the matrix, zeros for the
+    # biases.
+    tf.initialize_all_variables().run()
+    ##tf.global_variables_initializer().run()
+    for step in range(num_steps):
+        # Pick an offset within the training data, which has been randomized.
+        # Note: we could use better randomization across epochs.
+        offset = (step * batch_size) % (train_labels.shape[0] - batch_size)
+        # Generate a minibatch.
+        batch_data = train_dataset[offset:(offset + batch_size), :]
+        batch_labels = train_labels[offset:(offset + batch_size), :]
+        # Prepare a dictionary telling the session where to feed the minibatch.
+        # The key of the dictionary is the placeholder node of the graph to be fed,
+        # and the value is the numpy array to feed to it.
+        # Train feed dictionary
+        feed_dict_train = {tf_train_dataset : batch_data, tf_train_labels : batch_labels, dropout_prob: 0.5}
+        # Validation feed dictionary
+        feed_dict_valid = {tf_train_dataset : batch_data, tf_train_labels : batch_labels, dropout_prob: 0.5}
+        # Test feed dictionary
+        feed_dict_test = {tf_train_dataset : batch_data, tf_train_labels : batch_labels, dropout_prob: 0.5}
+
+        op, new_loss, new_train_pred = session.run([optimizer, loss, train_prediction], feed_dict = feed_dict_train)
+        if ((step % 50) == 0):
+            print ("Stochastic Loss %.2f at step %d" %(new_loss, step))
+            print("Stochastic Train accuracy %.2f" %accuracy(new_train_pred, batch_labels))
+            print("Stochastic Validation accuracy %.2f" %accuracy(valid_prediction.eval(feed_dict = feed_dict_valid), valid_labels))
+
+    print("Stochastic Test accuracy %.2f" %accuracy(test_prediction.eval(feed_dict = feed_dict_test), test_labels))
+        
+
+
